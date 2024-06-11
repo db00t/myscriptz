@@ -15,14 +15,14 @@ installer(){
 
 
         # Install nvm
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
         
         # Load nvm
         export NVM_DIR="$HOME/.nvm"
         [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
         
         # Install the latest LTS version of Node.js
-        nvm install --lts
+        nvm install 20
         
         # Set the installed version as the default
         nvm alias default $(nvm current)
